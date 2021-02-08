@@ -1,4 +1,5 @@
 import React from 'react';
+import './CurrencySelect.scss';
 
 const CurrencySelect = ({ 
   selectOptions, 
@@ -11,16 +12,10 @@ const CurrencySelect = ({
       value={selectedCurrency}
       onChange={onChange}
     >
-      {/* <option
-        className="currency-select__option"
-        value="Please select"
-      >
-        Please select
-      </option> */}
-      {selectOptions.map(option => {
+      {selectOptions.map((option, index) => {
         return(
           <option
-            key={option}
+            key={option + index}
             className="currency-select__option"
             value={option}
           >
